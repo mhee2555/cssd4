@@ -85,22 +85,22 @@ public class SendSterile_DocListDetailAdapter extends ArrayAdapter {
                     dialog.setCancelable(true);
                     dialog.setTitle("หมายเหตุ...");
 
-                    final EditText note1 = (EditText) dialog.findViewById(R.id.note1);
-                    note1.setText(listData.get(position).getXremark());
-
-                    Button button1 = (Button) dialog.findViewById(R.id.button1);
-                    button1.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View v) {
-                            dialog.dismiss();
-                        }
-                    });
-
-                    Button button5 = (Button) dialog.findViewById(R.id.button5);
-                    button5.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View v) {
-                            dialog.dismiss();
-                        }
-                    });
+//                    final EditText note1 = (EditText) dialog.findViewById(R.id.note1);
+//                    note1.setText(listData.get(position).getXremark());
+//
+//                    Button button1 = (Button) dialog.findViewById(R.id.button1);
+//                    button1.setOnClickListener(new View.OnClickListener() {
+//                        public void onClick(View v) {
+//                            dialog.dismiss();
+//                        }
+//                    });
+//
+//                    Button button5 = (Button) dialog.findViewById(R.id.button5);
+//                    button5.setOnClickListener(new View.OnClickListener() {
+//                        public void onClick(View v) {
+//                            dialog.dismiss();
+//                        }
+//                    });
                     dialog.show();
                 }
             }
