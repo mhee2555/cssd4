@@ -55,8 +55,8 @@ public class Login extends AppCompatActivity {
     private EditText pword;
 
     private Button submit;
+    private Button down2;
     private Button down;
-    private Button down1;
     private Spinner spinner_building;
     private ImageView imageView3;
 
