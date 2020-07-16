@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@id/main"
+        android:orientation="horizontal"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_blue"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear_form_sterile"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="8dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="85dp">
+
+            <LinearLayout
+                android:id="@+id/linear_column_sterile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:id="@+id/txt_doc_date"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.75"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="วันที่"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_doc_no"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="เลขที่เอกสาร"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_program"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#e5e5e5"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="โปรแกรมฆ่าเชื้อ"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_machine"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:background="#e5e5e5"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="เครื่อง"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_round"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="รอบ"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_start"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.75"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="เวลาเริ่ม"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_finish"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.75"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="เวลาเสร็จ"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_usr_sterile"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#e5e5e5"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="ผู้ตรวจ"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_sterile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:divider="@null"
+                android:background="@drawable/listview_transaction"
+                android:listSelector="#02fff6" >
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/linear_column_sterile_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.12"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="ลำดับ"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.18"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="รหัส"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.099"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="รหัสใช้งาน"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.7"
+                    android:background="#e5e5e5"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="รายการ"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:background="#e5e5e5"
+                    android:layout_weight="0.15"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="จำนวน"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.06"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="เลือก"
+                    android:textColor="#505050"
+                    android:textSize="14dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="#e5e5e5"
+                    android:gravity="center|center_vertical"
+                    android:maxLines="1"
+                    android:text="พิมพ์"
+                    android:textColor="#505050"
+                    android:textSize="14dp"
+                    android:visibility="gone"></TextView>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_sterile_detail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="70dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/listview_transaction"
+                android:divider="@null"
+                android:listSelector="#02fff6"></ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="161dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="13dp"
+        android:src="@drawable/bt_back" />
+
+    <ImageView
+        android:id="@+id/imv_print"
+        android:layout_width="161dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/imageBack"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_print_01" />
+
+    <TextView
+        android:id="@+id/txt_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/linear_layout_search"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:gravity="center|center_vertical"
+        android:maxLines="1"
+        android:text="รายการปริ้นท์สติ๊กเกอร์ย้อนหลัง"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"></TextView>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="43dp"
+        android:layout_alignBottom="@+id/txt_caption"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="237dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gDate"
+                android:layout_width="293dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/text_edit"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp" />
+
+            <Button
+                android:id="@+id/bDate"
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/calendar01"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.561"
+                app:layout_constraintStart_toEndOf="@+id/editName"
+                app:layout_constraintTop_toBottomOf="@+id/button_search"
+                app:layout_constraintVertical_bias="0.109" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linear_layout_search"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/txt_search"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/text_dropdown"
+            android:color="@color/form_label"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_search_item"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/search" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

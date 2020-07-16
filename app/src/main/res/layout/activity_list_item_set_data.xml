@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="2dp"
+    android:paddingLeft="2dp"
+    android:background="#33FFFFFF"
+    android:gravity="center" >
+
+    <CheckBox
+        android:id="@+id/chk"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_code"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="30dp"
+        android:background="#00FFFFFF"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:textColor="#666666"
+        android:background="#00FFFFFF"
+        android:textSize="14dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_qty"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:textColor="#666666"
+        android:textSize="14dp"
+        android:text="0"
+        android:gravity="right|center_vertical"
+        android:background="@drawable/text_view"
+        android:maxLines="1"
+        android:paddingRight="10dp"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_unit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:textColor="#666666"
+        android:background="#00FFFFFF"
+        android:textSize="14dp"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        >
+    </TextView>
+
+</LinearLayout>
+
+
+

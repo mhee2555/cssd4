@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="650dp"
+    android:layout_height="230dp"
+    android:background="@drawable/bg_popup_expire2">
+
+    <ImageView
+        android:id="@+id/switch_set"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="475dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/bt_confirm">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/linear_layout_search"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:text="การกำหนดใกล้หมดอายุ"
+            android:textAlignment="center"
+            android:fontFamily="@font/kanit"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/kanit"
+        android:text="การกำหนดใกล้หมดอายุของจ่ายกลางและแผนก"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/button_operation"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginStart="70dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/set_day"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle"
+        android:layout_marginLeft="455dp"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/colorEditText"
+        android:layout_marginTop="95dp">
+    </EditText>
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="วัน"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/button_operation"
+        android:layout_marginTop="108dp"
+        android:layout_marginLeft="540dp"
+        android:fontFamily="@font/kanit">
+    </TextView>
+
+</RelativeLayout>

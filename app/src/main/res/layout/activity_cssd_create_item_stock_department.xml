@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800dp"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="800dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="6dp"
+        >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/list_background_color">
+        </ListView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_save"
+        android:layout_width="161dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/bt_save" />
+
+</RelativeLayout>
+

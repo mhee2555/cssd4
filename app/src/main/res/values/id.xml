@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="machine_0"/>
+    <item type="id" name="machine_1"/>
+    <item type="id" name="machine_2"/>
+    <item type="id" name="machine_3"/>
+    <item type="id" name="machine_4"/>
+    <item type="id" name="machine_5"/>
+
+    <item type="id" name="process_0"/>
+    <item type="id" name="process_1"/>
+    <item type="id" name="process_2"/>
+    <item type="id" name="process_3"/>
+    <item type="id" name="process_4"/>
+    <item type="id" name="process_5"/>
+</resources>

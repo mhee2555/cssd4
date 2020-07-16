@@ -1,0 +1,1564 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:background="@drawable/bg"
+    android:layout_height="fill_parent">
+
+<ImageView
+    android:id="@+id/imageBack"
+    android:layout_width="161dp"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginBottom="2dp"
+    android:layout_marginStart="50dp"
+    android:src="@drawable/bt_bac_bue" />
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@drawable/bg"
+    tools:context=".Item">
+
+    <!-- Master -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="6.6"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        >
+
+        <!-- Tab Button-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <ImageButton
+                android:id="@+id/tab_1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_newitem_blue"
+                android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/tab_2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_newset_blue"
+                android:scaleType="centerInside"/>
+
+            <ImageButton
+                android:id="@+id/tab_3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_type_blue"
+                android:scaleType="centerInside"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/tab_4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_units_blue"
+                android:scaleType="centerInside"/>
+
+            <ImageButton
+                android:id="@+id/tab_5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_pack_blue"
+                android:scaleType="centerInside"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5" />
+
+            <ImageButton
+                android:id="@+id/tab_6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_search_blue"
+                android:scaleType="centerInside"/>
+
+
+
+        </LinearLayout>
+
+
+        <!-- Form main -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/form_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+
+            <!-- west -->
+            <LinearLayout
+                android:id="@+id/linear_main_form"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="4"
+                android:background="@drawable/form_layout"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <!--  -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="0dp">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_type_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="true"
+                            android:text="ชิ้นเดียว"
+                            android:textSize="13dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_type_set"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:text="ชุดเครื่องมือ / เซ็ท"
+                            android:textSize="13dp" />
+
+                        <CheckBox
+                            android:id="@+id/chkIsSpecial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="false"
+                            android:enabled="true"
+                            android:text="เครื่องมือ / ชิ้นเดียว"
+                            android:textSize="13dp" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <!-- รหัส -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="รหัส"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_item_code"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/text_standard_disable"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:textSize="14dp"
+                        android:enabled="false"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <!-- ชื่อเครื่องมือ -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="ชื่อเครื่องมือ *"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_item_name"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/text_standard"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <!-- ชื่อเรียก -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="ชื่อเรียก"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_item_alternate_name"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/text_standard"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <!-- จำนวนเซ็ท (ชิ้น) -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="จำนวน (เซ็ท)"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_set_count"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/text_standard_disable"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:textSize="14dp"
+                        android:enabled="false"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="รายการ"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+
+
+                <!-- หน่วยนับ -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="หน่วยนับ *"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/txt_unit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_dropdown_standard"
+                            android:color="@color/form_label"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:singleLine="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- ประเภท -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="ประเภท *"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/txt_item_type"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_dropdown_standard"
+                            android:color="@color/form_label"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:singleLine="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- สถานะ -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="0dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="สถานะ"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_used"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="true"
+                            android:text="ใช้งาน"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_unused"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:text="ไม่ใช้งาน"
+                            android:textSize="14dp" />
+                    </RadioGroup>
+
+                    <CheckBox
+                        android:id="@+id/chkNoWash"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/colorBlue"
+                        android:checked="false"
+                        android:enabled="true"
+                        android:text="ไม่ต้องผ่านการล้าง"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="0dp">
+
+
+
+
+                    <Button
+                        android:id="@+id/btn_delete_item"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1.5"
+                        android:text="ลบ"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_create_item_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/button_master"
+                        android:maxLines="1"
+                        android:text="เพิ่มรายการในแผนก"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/btn_open_item_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/button_master"
+                        android:maxLines="1"
+                        android:text="จัดการสต็อค"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/btn_open_sterile_program_item"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/button_master"
+                        android:maxLines="1"
+                        android:text="โปรแกรมฆ่าเชื้อ"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13dp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_save_item"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/button_master"
+                        android:maxLines="1"
+                        android:text="บันทึก"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- center -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/txt_code"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/textview_column"
+                        android:visibility="gone"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="30dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:gravity="center|center_vertical"
+                        android:background="@drawable/textview_column"
+                        android:maxLines="1"
+                        android:text="รายการ"
+
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="จำนวน"
+                        android:background="@drawable/textview_column"
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="หน่วย"
+                        android:background="@drawable/textview_column"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/list_set_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/form_listview"></ListView>
+
+
+
+            </LinearLayout>
+
+            <!-- east -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="3"
+                android:background="@drawable/form_layout"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <ImageView
+                    android:id="@+id/img_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="8dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/ic_preview" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Detail -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="4.4"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" >
+
+        <!-- Tab Button-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tab_detail_1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/tab_master_cyanblue"
+                android:text="รายละเอียด"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:id="@+id/tab_detail_2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/tab_master_cyanblue_noselect"
+                android:text="ราคา"
+                android:textSize="14dp"
+                android:textColor="@android:color/darker_gray"/>
+
+            <Button
+                android:id="@+id/tab_detail_3"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/tab_master_cyanblue_noselect"
+                android:text="ข้อมูลสต๊อค"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- ************************** Tab Detail ****************************** -->
+
+        <!-- Form Detail 1 -->
+        <LinearLayout
+            android:id="@+id/linear_layout_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/form_layout"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_01"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <!-- ลักษณะใช้งาน -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="ลักษณะใช้งาน"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_reused"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorBlue"
+                                android:checked="true"
+                                android:text="ใช้ซ้ำ"
+                                android:textSize="14dp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_unreused"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/colorBlue"
+                                android:text="ใช้แล้วทิ้ง"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <!-- ใช้ตามแผนก -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+
+                        <!-- สติ๊กเกอร์ -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="สติ๊กเกอร์ *"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txt_label"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="รูปแบบการล้าง"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txt_washingprocess"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!-- รูปแบบการห่อ -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="รูปแบบการห่อ *"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txt_packingmat"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="อายุการใช้งาน"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edt_life"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/text_standard_disable"
+                                android:enabled="false"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:paddingLeft="8dp"
+                                android:text="0"
+                                android:textColor="@color/colorEditText"
+                                android:textSize="14dp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="20dp"
+                                android:text="วัน"
+                                android:textColor="@color/form_label"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- รูปแบบการล้าง -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <RadioGroup
+                            android:id="@+id/radiogroup_department"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_used_department"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorBlue"
+                                android:checked="true"
+                                android:text="ใช้เฉพาะแผนก"
+                                android:textSize="14dp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_used_multiple_department"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/colorBlue"
+                                android:text="ใช้หลายแผนก"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="รูปแบบการฆ่าเชื้อ *"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txt_sterileprocess"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="ผู้ผลิต"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txt_manufact"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!-- รูปแบบการฆ่าเชื้อ -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="แผนก"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txt_department"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="ใช้ตามแผนก"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txt_special"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="ผู้ขาย"
+                            android:textColor="@color/form_label"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_weight="0.35"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/txt_supplier"
+                                android:layout_width="fill_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_dropdown_standard"
+                                android:color="@color/form_label"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="8dp"
+                                android:singleLine="true" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Form Detail 2 -->
+        <LinearLayout
+            android:id="@+id/linear_layout_2"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="10dp"
+            android:paddingTop="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_21"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingTop="10dp"
+                android:background="@drawable/form_layout"
+                >
+
+            <!-- ราคาทุน -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:paddingTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="ราคาทุน"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:textColor="@color/form_label"
+                    android:paddingLeft="20dp"
+                    android:textSize="14dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_cost_price"
+                    android:text="0"
+                    android:background="@drawable/text_standard"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorEditText"
+                    android:textSize="14dp"
+                    />
+
+                <Space
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- ราคาขาย -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="ราคาขาย"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:textColor="@color/form_label"
+                    android:paddingLeft="20dp"
+                    android:textSize="14dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_sale_price"
+                    android:text="0"
+                    android:background="@drawable/text_standard"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorEditText"
+
+                    android:textSize="14dp"
+                    />
+
+                <Space
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- ราคาใช้งาน -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="ราคาใช้งาน"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:textColor="@color/form_label"
+                    android:paddingLeft="20dp"
+                    android:textSize="14dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_usage_price"
+                    android:text="0"
+                    android:background="@drawable/text_standard"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorEditText"
+                    android:textSize="14dp"
+                    />
+
+                <Space
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:text="* ราคาใช้งาน (Cost x% ราคาทุน)"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="30dp"
+                android:textColor="@color/colorBlue"
+                android:paddingLeft="20dp"
+                android:textSize="14dp"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Form Detail 3 -->
+        <LinearLayout
+            android:id="@+id/linear_layout_3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_31"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/form_layout"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <!-- กระบวรการบรรจุ -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="กระบวนการบรรจุ"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_on_cssd"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/text_standard_disable"
+                        android:enabled="false"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/colorEditText"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Minimum"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_minimum"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/text_standard_disable"
+                        android:enabled="false"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/colorEditText"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <!-- อยู่ในสต็อค -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="อยู่ในสต๊อค"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_on_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/text_standard"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/colorEditText"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Maximum"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edt_maximum"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/text_standard"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/colorEditText"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <!-- จ่ายให้แผนก -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="จ่ายให้แผนก"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/txt_on_department"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/text_standard_disable"
+                        android:enabled="false"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/colorEditText"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+                <!-- รวม -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.15"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="รวม"
+                        android:textColor="@color/form_label"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/txt_all_item_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.35"
+                        android:background="@drawable/text_standard_disable"
+                        android:enabled="false"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/colorEditText"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

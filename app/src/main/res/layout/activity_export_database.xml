@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bluetab"
+    android:orientation="vertical"
+    tools:context=".master_data.DepartmentActivity">
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:text="Export DataBase"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152dp"
+        android:text="Select DataBase"
+        android:textColor="@color/colorGrayB"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/database"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        style="@style/spinner_style_register"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+
+    <Button
+        android:id="@+id/Export"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="568dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/button_master"
+        android:text="Export"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        />
+
+    <ListView
+        android:id="@+id/list_database"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="430dp"
+        android:layout_marginTop="340dp"
+        android:listSelector="@color/fefe"
+        android:background="@drawable/rectangle">
+    </ListView>
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="565dp"
+        android:layout_marginTop="560dp"
+        android:background="@drawable/button_master"
+        android:text="Download DataBase"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintVertical_bias="0.109" />
+
+
+</RelativeLayout>

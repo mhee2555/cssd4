@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="1dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/txt_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:background="#AAAAAA"
+            android:visibility="gone"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:gravity="center|center_vertical"
+            android:maxLines="1"
+            android:layout_marginRight="1dp"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_item_name"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="30dp"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_marginRight="1dp"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_qty"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="30dp"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:gravity="center|center_vertical"
+            android:maxLines="1"
+            android:layout_marginRight="1dp"
+            >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/chk"
+            android:layout_height="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center|center_horizontal"
+            android:src="@drawable/ic_box_normal_blue"
+            />
+
+    </LinearLayout>
+
+

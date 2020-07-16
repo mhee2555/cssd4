@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="201dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="13dp"
+        android:src="@drawable/bt_back" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg"
+        >
+
+            <LinearLayout
+                android:id="@+id/form"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/txt_id"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="เลขที่เอกสาร"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="วันที่เอกสาร"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="30dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="แผนก"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="รายการ"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="คงเหลือ"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:layout_marginRight="1dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:text="นำเข้า"
+                        android:background="@drawable/textview_column"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        >
+                    </TextView>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/list_send_sterile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/form_listview">
+                </ListView>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

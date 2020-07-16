@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/r"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rectangle">
+
+        <RelativeLayout
+            android:id="@+id/maindoc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/w_docno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:paddingLeft="2dp"
+                android:text="SS00710-0001"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/w_docdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/docno"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="2dp"
+                android:text="26/07/2018"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/w_dapt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/w_docdate"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="228dp"
+                android:paddingLeft="2dp"
+                android:text="OR"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/w_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/docno"
+                android:layout_alignBottom="@+id/isstatus"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="หมายเหตุ:"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/w_note"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView39"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/iswashdept"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/w_bt_note"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="64dp"
+                android:background="@drawable/ic_list_blue"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

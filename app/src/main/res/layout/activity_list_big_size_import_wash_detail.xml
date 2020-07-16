@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="62.5dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_no"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/textView56"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="1."
+            android:textColor="@color/list_text_color"
+            android:layout_marginLeft="5dp"
+            android:textSize="18dp"></TextView>
+
+        <TextView
+            android:id="@+id/txt_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/txt_no"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="xxx"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/list_text_color"
+            android:textSize="18dp"></TextView>
+
+        <TextView
+            android:id="@+id/txt_packingmat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/txt_item_name"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="pag"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/list_text_color"
+            android:textSize="12dp"></TextView>
+
+        <TextView
+            android:id="@+id/txt_qty"
+            android:layout_width="53dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/imv_add"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toStartOf="@+id/imv_add"
+            android:background="@drawable/text_edit"
+            android:gravity="center|center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/list_text_color"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/imv_add"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_right_blue" />
+
+
+        <CheckBox
+            android:id="@+id/chk"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|center_horizontal"
+            android:buttonTint="@color/colorBlue"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_item_code"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:id="@+id/txt_item_program_id"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:visibility="gone"></TextView>
+
+
+
+</LinearLayout>
+
+

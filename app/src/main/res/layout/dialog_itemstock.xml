@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="250dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_curve">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="390dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="จัดการสต๊อก"
+                        android:fontFamily="@font/kanit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="55dp"
+                        android:gravity="center"
+                        android:text="รายละเอียด"
+                        android:fontFamily="@font/kanit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/P1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:id="@+id/itemcode_stock"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="รหัส : "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:gravity="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/itemname_stock"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="40dp"
+                android:text="ชื่อรายการ : "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:gravity="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/qty_stock"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="80dp"
+                android:text="จำนวนในสต๊อก : "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:gravity="center">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

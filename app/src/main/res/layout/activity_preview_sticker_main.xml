@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PreviewSticker_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/txt_edit_graywhite"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="1000dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:text="ตัวอย่างข้อมูลสติ๊กเกอร์"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt_setxy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Set XY" />
+
+            <Spinner
+                android:id="@+id/spn_xflip"
+                style="@style/spinner_style_register"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spn_printer"
+                style="@style/spinner_style_register"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/print_reveiw"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_print" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/txt_edit_graywhite"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:paddingLeft="20dp"
+                    android:text="รายการข้อมูล"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_PExpDate"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  วันหมดอายุ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_PDept"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  ชื่อแผนก"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:text="รูปแบบรหัสเครื่องมือ"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_UsageCode"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  รหัสเครื่องมือ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_PPrice"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  ราคา"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerOption"
+                        style="@style/spinner_style_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="35dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_PItemName"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  ชื่อเครื่องมือ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/cb_Costbar"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  บาร์โค้ดราคา"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/cb_PPackDate"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  วันฆ่าเชื้อ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/cb_PMachine"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  เครื่อง"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:text="ความเร็วปริ้นท์"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_PQrCode"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  QRCode"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_PRound"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  รอบ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSP"
+                        style="@style/spinner_style_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="35dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_PEmp1"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="241dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  ผู้เตรียม"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView56"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:text="ความเข้ม"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_PEmp2"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="241dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  ผู้ฆ่าเชื้อ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDensity"
+                        style="@style/spinner_style_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="35dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/cb_PEmp3"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="241dp"
+                        android:buttonTint="@color/colorBlue"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4"
+                        android:text="  ผู้ตรวจ"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1000dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/sk1_1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bt_steam_green"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/sk1_2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bt_steamdb_blue"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/sk2_1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bt_nornmal"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/sk2_2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bt_nornmaldb_blue"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+               <!-- <LinearLayout
+                    android:id="@+id/ls1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bgsticker"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="17dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/pdept"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:adjustViewBounds="true"
+                                app:srcCompat="@drawable/pdept" />
+
+                            <ImageView
+                                android:id="@+id/usagecode"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:adjustViewBounds="true"
+                                app:srcCompat="@drawable/pusagecode" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/imgPPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="140dp"
+                                android:text="Price  :  20.-"
+                                android:textAlignment="viewStart"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imgCostBar"
+                                android:layout_width="80dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="145dp"
+                                app:srcCompat="@drawable/barcode_cost" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/qrcode"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:layout_weight="0.1"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/pqrcode" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0.35"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/pmachine"
+                                    android:layout_width="65dp"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/pmachine" />
+
+                                <ImageView
+                                    android:id="@+id/pround"
+                                    android:layout_width="59dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="3dp"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/pround" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="1dp"
+                                android:text="PACKING DATE"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/ppackdate"
+                                android:layout_width="210dp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                app:srcCompat="@drawable/ppackdate" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="1dp"
+                                android:text="EXPIRE DATE"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/pexpiredate"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                app:srcCompat="@drawable/pexpdate" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/pemp1"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/pemp1" />
+
+                                <TextView
+                                    android:id="@+id/concattxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="/"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:id="@+id/pemp3"
+                                    android:layout_width="98dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:adjustViewBounds="true"
+                                    app:srcCompat="@drawable/pemp2" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/pemp2"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                app:srcCompat="@drawable/pemp3" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+
+
+                </LinearLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/ls1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bgsticker1_2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/itemname1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="PILLAR IMMOBILIZATION"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="47dp"
+                        android:layout_marginTop="70dp"
+                        android:text="Price : 20.-"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/barcode1_2"
+                        android:layout_width="60dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/price1_2"
+                        android:layout_marginEnd="54dp"
+                        android:background="@drawable/barcode_cost" />
+
+                    <TextView
+                        android:id="@+id/dept1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/price1_2"
+                        android:layout_marginStart="41dp"
+                        android:text="CSSD - XXXXXXXX"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/usage1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="79dp"
+                        android:layout_marginTop="100dp"
+                        android:text="Pxxxxx-xxxxx"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qrcode1_2"
+                        android:layout_width="170dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="29dp"
+                        android:layout_marginTop="130dp"
+                        android:background="@drawable/pqrcode" />
+
+                    <TextView
+                        android:id="@+id/machine1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/qrcode1_2"
+                        android:layout_centerHorizontal="true"
+                        android:text="เครื่อง : 1"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/round1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/qrcode1_2"
+                        android:layout_toStartOf="@+id/price1_2"
+                        android:text="รอบ : 2"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/pck1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/machine1_2"
+                        android:layout_marginTop="173dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/exp1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/machine1_2"
+                        android:layout_marginTop="207dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emp1_1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/machine1_2"
+                        android:layout_marginTop="238dp"
+                        android:text="กัลญาณี-เตรียม/"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp2_1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/emp1_1_2"
+                        android:layout_toEndOf="@+id/emp1_1_2"
+                        android:text="พลอย-ตรวจ"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp3_1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/qrcode1_2"
+                        android:layout_alignStart="@+id/machine1_2"
+                        android:text="โสภิต-ฆ่าเชื้อ"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/_qrcode1_2"
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="26dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/pqrcode" />
+
+                    <TextView
+                        android:id="@+id/_itemname1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/qrcode1_2"
+                        android:layout_marginBottom="122dp"
+                        android:text="PILLAR IMMOBILIZATION"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_dept1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/_qrcode1_2"
+                        android:layout_alignStart="@+id/qrcode1_2"
+                        android:text="CSSD - XXXXXXXX"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_usage1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/dept1_2"
+                        android:layout_alignTop="@+id/_qrcode1_2"
+                        android:text="Pxxxxx-xxxxx"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_pck1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/_qrcode1_2"
+                        android:layout_alignStart="@+id/dept1_2"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/_exp1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/itemname1_2"
+                        android:layout_alignTop="@+id/_pck1_2"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ls2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/bgsticker2_1"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/itemname2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="PILLAR IMMOBILIZATION"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dept2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="90dp"
+                        android:text="CSSD - XXXXXXXX"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/usage2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="83dp"
+                        android:layout_marginTop="120dp"
+                        android:text="Pxxxxx-xxxxx"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/usage2_1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="-120dp"
+                        android:layout_marginEnd="45dp"
+                        android:text="Price : 20.-"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/barcode2_1"
+                        android:layout_width="60dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/usage2_1"
+                        android:layout_marginEnd="52dp"
+                        android:background="@drawable/barcode_cost" />
+
+                    <TextView
+                        android:id="@+id/machine2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/qrcode2_1"
+                        android:layout_toEndOf="@+id/usage2_1"
+                        android:text="เครื่อง : 1"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/round2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/machine2_1"
+                        android:layout_toEndOf="@+id/itemname2_1"
+                        android:text="รอบ : 2"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/qrcode2_1"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="21dp"
+                        android:layout_marginStart="26dp"
+                        android:background="@drawable/pqrcode" />
+
+                    <TextView
+                        android:id="@+id/pck2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="71dp"
+                        android:layout_toEndOf="@+id/usage2_1"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/exp2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/pck2_1"
+                        android:layout_marginEnd="85dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emp2_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="29dp"
+                        android:layout_toEndOf="@+id/itemname2_1"
+                        android:text="พลอย-ตรวจ/"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp1_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/itemname2_1"
+                        android:layout_alignTop="@+id/emp2_2_1"
+                        android:text="กัลญาณี-เตรียม/"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp3_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/emp2_2_1"
+                        android:layout_toEndOf="@+id/emp2_2_1"
+                        android:text="โสภิต-ฆ่าเชื้อ"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ls2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bgsticker2_2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/itemname2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="PILLAR IMMOBILIZATION"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="48dp"
+                        android:layout_marginTop="93dp"
+                        android:text="Price : 20.-"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/barcode2_2"
+                        android:layout_width="60dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/price2_2"
+                        android:layout_marginEnd="56dp"
+                        android:background="@drawable/barcode_cost" />
+
+                    <TextView
+                        android:id="@+id/dept2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginTop="86dp"
+                        android:text="CSSD - XXXXXXXX"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/usage2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="84dp"
+                        android:layout_marginTop="123dp"
+                        android:text="Pxxxxx-xxxxx"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qrcode2_2"
+                        android:layout_width="170dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="29dp"
+                        android:layout_marginTop="156dp"
+                        android:background="@drawable/pqrcode" />
+
+                    <TextView
+                        android:id="@+id/machine2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/qrcode2_2"
+                        android:layout_centerHorizontal="true"
+                        android:text="เครื่อง : 1"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/round2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/qrcode2_2"
+                        android:layout_toStartOf="@+id/price2_2"
+                        android:text="รอบ : 2"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/pck2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/machine2_2"
+                        android:layout_marginTop="201dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/exp2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="132dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emp1_2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/machine2_2"
+                        android:layout_below="@+id/qrcode2_2"
+                        android:text="กัลญาณี-เตรียม/"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp2_2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/qrcode2_2"
+                        android:layout_toEndOf="@+id/emp1_2_2"
+                        android:text="พลอย-ตรวจ/"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp3_2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/qrcode2_2"
+                        android:layout_toEndOf="@+id/emp2_2_2"
+                        android:text="โสภิต-ฆ่าเชื้อ"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/_itemname2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/dept2_2"
+                        android:layout_marginBottom="153dp"
+                        android:text="PILLAR IMMOBILIZATION"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_dept2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/dept2_2"
+                        android:layout_marginBottom="120dp"
+                        android:text="CSSD - XXXXXXXX"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_usage2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="88dp"
+                        android:layout_marginStart="69dp"
+                        android:text="Pxxxxx-xxxxx"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_pck2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="27dp"
+                        android:layout_marginStart="37dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/_exp2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/_pck2_2"
+                        android:layout_centerHorizontal="true"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/_qrcode2_2"
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="26dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/pqrcode" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ls1_1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="170dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bgsticker1_1"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/itemname1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/qrcode1_1"
+                        android:layout_marginTop="15dp"
+                        android:text="PILLAR IMMOBILIZATION"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="47dp"
+                        android:layout_marginTop="70dp"
+                        android:text="Price : 20.-"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/barcode1_1"
+                        android:layout_width="60dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/price1_1"
+                        android:layout_marginEnd="54dp"
+                        android:background="@drawable/barcode_cost" />
+
+                    <TextView
+                        android:id="@+id/dept1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/price1_1"
+                        android:layout_marginStart="47dp"
+                        android:text="CSSD - XXXXXXXX"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/usage1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="87dp"
+                        android:layout_marginTop="99dp"
+                        android:text="Pxxxxx-xxxxx"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/qrcode1_1"
+                        android:layout_width="170dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="93dp"
+                        android:layout_marginStart="28dp"
+                        android:background="@drawable/pqrcode" />
+
+                    <TextView
+                        android:id="@+id/machine1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/usage1_1"
+                        android:layout_centerHorizontal="true"
+                        android:text="เครื่อง : 1"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/round1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/usage1_1"
+                        android:layout_toStartOf="@+id/price1_1"
+                        android:text="รอบ : 2"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/pck1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/machine1_1"
+                        android:layout_marginTop="163dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/exp1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/machine1_1"
+                        android:layout_marginBottom="145dp"
+                        android:text="01 - 01 - 2018"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emp1_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/machine1_1"
+                        android:layout_marginBottom="117dp"
+                        android:text="กัลญาณี-เตรียม/"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp2_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/emp1_1_1"
+                        android:layout_toEndOf="@+id/emp1_1_1"
+                        android:text="พลอย-ตรวจ"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/emp3_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/qrcode1_1"
+                        android:layout_alignStart="@+id/emp1_1_1"
+                        android:text="โสภิต-ฆ่าเชื้อ"
+                        android:textColor="@android:color/black" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Label_activity"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button_save"
+        android:layout_marginStart="283dp"
+        android:background="@drawable/bt_addsticker"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="201dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="29dp"
+        android:src="@drawable/bt_bac_bue" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/bt_save"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

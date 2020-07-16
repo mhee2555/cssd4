@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_payout"
+    android:orientation="vertical"
+    tools:context=".PayoutActivity">
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:text="จ่ายเครื่องมือให้แผนก"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/eUsageCode"
+        android:layout_width="257dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="123dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/text_edit"
+        android:hint="นำเข้ารายการ"
+        android:inputType="text"
+        android:paddingStart="15dp" />
+
+    <Switch
+        android:id="@+id/isWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView75"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/textView75"
+        android:text="เบิก"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/bt_mode"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/eUsageCode"
+        android:layout_marginStart="-123dp"
+        android:layout_toEndOf="@+id/eUsageCode"
+        android:background="@drawable/button_tab"
+        android:gravity="center"
+        android:text="เช็คของ"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <Switch
+        android:id="@+id/bt_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/eUsageCode"
+        android:layout_marginStart="-123dp"
+        android:layout_toEndOf="@+id/eUsageCode" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="116dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:button="@drawable/checkbox_selector"
+            android:textAlignment="textStart"
+            android:visibility="gone" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinner01"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bDate"
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:layout_alignEnd="@+id/gDate"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calendar01"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/button01"
+                android:layout_width="128dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/ic_search_01" />
+
+            <TextView
+                android:id="@+id/gDate"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/text_edit"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Re3"
+        android:layout_width="410dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="495dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewDate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDocNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="180dp"
+            android:layout_marginBottom="20dp"
+            android:text="ผู้รับ   "
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinner3"
+            style="@style/spinner_style"
+            android:layout_width="200dp"
+            android:layout_height="33dp"
+            android:layout_alignTop="@+id/recipient"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-5dp"
+            android:layout_toEndOf="@+id/recipient" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/b_Back"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="13dp"
+        android:layout_weight="1"
+        android:background="@drawable/bt_bac_bue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toEndOf="@+id/editName"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="348dp"
+            android:layout_height="420dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1.6"
+            android:orientation="vertical">
+
+            <ExpandableListView
+                android:id="@+id/elView"
+                android:layout_width="match_parent"
+                android:layout_height="356dp"
+                android:divider="@null"
+                android:dividerHeight="5dp"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:listSelector="@color/fefe" />
+
+            <ListView
+                android:id="@+id/ListView01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="775dp"
+            android:layout_height="440dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="116dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/ListView02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_01"
+                android:numColumns="auto_fit" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="800dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="43dp"
+        android:layout_marginEnd="45dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bt_notfully"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/ic_unsent" />
+
+        <Button
+            android:id="@+id/bt_createdoc"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/bt_additem"
+            android:background="@drawable/bt_newdoc_payout"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bt_additem"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/button03"
+            android:background="@drawable/bt_pickup_payout"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bt_chkbox_delete"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="124dp"
+            android:background="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/button02"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:paddingRight="25dp"
+            android:src="@drawable/bt_release_payout"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/button03"
+            android:layout_width="143dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/button02"
+            android:src="@drawable/bt_print_payout"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/txt_notfully"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/bt_createdoc"
+            android:layout_marginStart="83dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

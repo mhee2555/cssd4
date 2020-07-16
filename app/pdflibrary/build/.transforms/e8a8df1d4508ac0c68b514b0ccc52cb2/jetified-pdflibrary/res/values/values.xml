@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pdfViewPager_ab_color">#990000</color>
+    <color name="pdfViewPager_ab_color_darker">#660000</color>
+    <color name="pdfViewPager_ab_color_lighter">#CC0000</color>
+    <color name="pdfViewPager_background_color">@android:color/white</color>
+    <string name="app_name">pdfviewpager</string>
+    <string name="pdfvp_ready_to_download">Ready to download</string>
+    <declare-styleable name="PDFViewPager">
+        <attr format="string" name="assetFileName"/> <!-- Load PDF from Asset -->
+        <attr format="string" name="pdfUrl"/> <!-- Load PDF from remote URL -->
+        <attr format="float" name="scale"/> <!-- Set initial scale for PDF -->
+    </declare-styleable>
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr format="reference" name="src"/>
+        <attr format="string" name="assetName"/>
+        <attr format="boolean" name="panEnabled"/>
+        <attr format="boolean" name="zoomEnabled"/>
+        <attr format="boolean" name="quickScaleEnabled"/>
+        <attr format="color" name="tileBackgroundColor"/>
+    </declare-styleable>
+</resources>

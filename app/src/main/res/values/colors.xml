@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorRedNew">#ff3300</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorEditText">#343434</color>
+    <color name="odd">#33DDDDDD</color>
+    <color name="even">#33EFEFEF</color>
+    <color name="fefe">#df47b3ea</color>
+    <color name="form_label">#424242</color>
+    <color name="form_dropdown">#333333</color>
+    <color name="form_etext">#333333</color>
+    <color name="button_operation">#333333</color>
+    <color name="column_color">#428ac9</color>
+    <color name="list_text_color">#323232</color>
+    <color name="list_background_color">#BBFFFFFF</color>
+    <color name="list_background_transparent_color">#00FFFFFF</color>
+    <color name="colorBlueDrak">#0E28B8</color>
+    <color name="colorBlue">#2549A2</color>
+    <color name="colorGreen">#0b6e6c</color>
+    <color name="colorRed">#9d0000</color>
+    <color name="colorGray">#666666</color>
+    <color name="colorGrayB">#535353</color>
+    <color name="colorSwitchBlue">#4A89FF</color>#
+    <color name="colorDirBlue">#CBE2F4</color>
+    <color name="colorDirRed">#FFC7C7</color>
+    <color name="colorDirGreen">#b3ff99</color>
+    <color name="colorSel">#02fff6</color>
+</resources>

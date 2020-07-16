@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="1300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@id/main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_recall"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_form_sterile"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="8dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="100dp">
+
+            <ListView
+                android:id="@+id/list_sterile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="70dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/listview_transaction"
+                android:divider="@null"></ListView>
+
+            <GridView
+                android:id="@+id/grid_sterile_detail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="70dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/listview_transaction"
+                android:divider="@null"
+                android:numColumns="2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linear_layout_search"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imv_print"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="107dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/text_dropdown"
+            android:color="@color/form_label"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_search_item"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/search" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="161dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="13dp"
+        android:src="@drawable/bt_back" />
+
+    <ImageView
+        android:id="@+id/imv_print"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="445dp"
+        android:layout_marginTop="35dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_finish" />
+
+    <TextView
+        android:id="@+id/txt_search"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/linear_layout_search"
+        android:layout_alignStart="@+id/txt_caption"
+        android:gravity="center|center_vertical"
+        android:maxLines="1"
+        android:text="ค้นหาเอกสาร"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"></TextView>
+
+    <TextView
+        android:id="@+id/txt_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center|center_vertical"
+        android:maxLines="1"
+        android:text="เอกสารฆ่าเชื้อ (Draft)"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"></TextView>
+
+</RelativeLayout>

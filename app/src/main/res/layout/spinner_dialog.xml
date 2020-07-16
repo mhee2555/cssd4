@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="650dp"
+    android:background="@drawable/popup_approve">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:text="บันทึกความเสี่ยง"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tCount"
+        android:layout_width="234dp"
+        android:layout_height="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_marginTop="61dp"
+        android:paddingTop="3dp"
+        android:text="จำนวน   2   รายการ" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tCount"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp"
+        android:checked="true"
+        android:text="ล้างใหม่"
+        android:textOff="ไม่"
+        android:textOn="ใช่" />
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="521dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spn_list"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ListView
+                android:id="@+id/lOcc"
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:layout_marginStart="50dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/bt_cancel" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button2"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bt_save"
+            android:padding="20dp" />
+
+        <Spinner
+            android:id="@+id/spn_Step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
