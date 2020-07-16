@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="500dp"
-    android:layout_height="400dp"
+    android:layout_height="500dp"
     android:background="@drawable/popup">
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:orientation="vertical">
 
         <CheckBox
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="170dp"
         android:orientation="vertical">
 
         <CheckBox
@@ -84,7 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="220dp"
         android:orientation="vertical">
 
         <CheckBox
@@ -115,7 +115,7 @@
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="270dp">
 
         <EditText
             android:id="@+id/text_remark"
@@ -123,6 +123,9 @@
             android:layout_height="120dp"
             android:layout_marginTop="10dp"
             android:text=" TextView"
+            android:gravity="left|top"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
             android:background="@drawable/login_block"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -131,5 +134,25 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/summit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/btn_save"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="415dp">
+    </Button>
+
+    <Button
+        android:id="@+id/cancle"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/btn_cancel1"
+        android:layout_toStartOf="@+id/summit"
+        android:layout_marginTop="415dp">
+    </Button>
 
 </RelativeLayout>

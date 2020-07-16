@@ -81,7 +81,7 @@ public class SendSterile_DocListDetailAdapter extends ArrayAdapter {
                 if (!checkBoxsub.isChecked()){
                     final Dialog dialog = new Dialog(aActivity);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                    dialog.setContentView(R.layout.remark_dialog);
+                    dialog.setContentView(R.layout.remark_dialog_sendsterlie);
                     dialog.setCancelable(true);
                     dialog.setTitle("หมายเหตุ...");
 

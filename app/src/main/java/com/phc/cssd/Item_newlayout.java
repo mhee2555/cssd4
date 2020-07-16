@@ -1839,8 +1839,8 @@ public class Item_newlayout extends AppCompatActivity {
                 try {
                     ByteArrayOutputStream stream1 = new ByteArrayOutputStream();
                     bitmap1 = (( BitmapDrawable ) img_item1.getDrawable()).getBitmap();
-                    bitmap1 = Bitmap.createScaledBitmap(bitmap1, width, height, true);
-                    bitmap1.compress(Bitmap.CompressFormat.JPEG, 50, stream1); //compress to which format you want.
+                    bitmap1 = Bitmap.createScaledBitmap(bitmap1,width,height, true);
+                    bitmap1.compress(Bitmap.CompressFormat.JPEG,100, stream1); //compress to which format you want.
                     byte[] byte_arr1 = stream1.toByteArray();
                     String image_str1 = Base64.encodeToString(byte_arr1, Base64.DEFAULT);
 
@@ -1850,7 +1850,7 @@ public class Item_newlayout extends AppCompatActivity {
                         ByteArrayOutputStream stream2 = new ByteArrayOutputStream();
                         bitmap2 = (( BitmapDrawable ) img_item1.getDrawable()).getBitmap();
                         bitmap2 = Bitmap.createScaledBitmap(bitmap2, width, height, true);
-                        bitmap2.compress(Bitmap.CompressFormat.JPEG, 50, stream2); //compress to which format you want.
+                        bitmap2.compress(Bitmap.CompressFormat.JPEG, 100, stream2); //compress to which format you want.
                         byte[] byte_arr2 = stream2.toByteArray();
                         image_str2 = Base64.encodeToString(byte_arr2, Base64.DEFAULT);
                     }
