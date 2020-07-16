@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dialog_remark_sendsterile"></activity>
+        <activity
+            android:name=".dialog_remark_sendsterile"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/myDialog1"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".dialog_Load_Img"
             android:screenOrientation="sensorLandscape"

@@ -244,6 +244,8 @@ public class CssdWash extends AppCompatActivity {
     private boolean IsQR_Wash_Type = true;
     private boolean IsUsedProcessTimeByWashType = true;
     private boolean IsShowBasket = false;
+
+    String EmpCode;
     // =============================================================================================
     public void onDestroy() {
         super.onDestroy();
@@ -299,6 +301,7 @@ public class CssdWash extends AppCompatActivity {
         userid = intent.getStringExtra("userid");
         IsAdmin = intent.getBooleanExtra("IsAdmin", false);
         B_ID = intent.getStringExtra("B_ID");
+        EmpCode = intent.getStringExtra("EmpCode");
     }
 
     private void byConfig(){
@@ -3930,6 +3933,8 @@ public class CssdWash extends AppCompatActivity {
         Intent i = new Intent(CssdWash.this, SendSterile_MainActivity.class);
         i.putExtra("userid", userid);
         i.putExtra("IsAdmin", IsAdmin);
+        i.putExtra("EmpCode", EmpCode);
+        Log.d("FKJDHJKDH",EmpCode+"");
         i.putExtra("B_ID", B_ID);
         startActivity(i);
         clearForm();

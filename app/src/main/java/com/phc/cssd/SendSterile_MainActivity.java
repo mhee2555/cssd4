@@ -190,6 +190,9 @@ public class SendSterile_MainActivity extends AppCompatActivity {
     CheckBox checkBoxall;
     String CheckAll = "0";
     String Usagecode = "";
+    String DepID = "";
+    String DocNoSend = "";
+    String EmpCode = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -225,6 +228,7 @@ public class SendSterile_MainActivity extends AppCompatActivity {
             IsAdmin = bd.getBoolean("IsAdmin");
         }
         B_ID = intent.getStringExtra("B_ID");
+        EmpCode = intent.getStringExtra("EmpCode");
     }
 
     public void initialize() {
@@ -3324,6 +3328,17 @@ public class SendSterile_MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void OpenDialog(final String Itemname) {
+        Intent intent = new Intent(SendSterile_MainActivity.this, dialog_remark_sendsterile.class);
+        intent.putExtra("Itemname", Itemname);
+        intent.putExtra("Usagecode", Usagecode);
+        intent.putExtra("DepID", DepID);
+        intent.putExtra("DocNoSend", DocNoSend);
+        intent.putExtra("EmpCode",EmpCode);
+        Log.d("FKJDHJKDH",EmpCode+"");
+        startActivity(intent);
+    }
+
     public void showAndhideBlueHead(boolean x) {
         txt_usr_receive.setEnabled(x);
         txt_usr_send.setEnabled(x);
@@ -3334,8 +3349,10 @@ public class SendSterile_MainActivity extends AppCompatActivity {
         bt_search_sendsteril1.setEnabled(x);
     }
 
-    public void UsageCode(String UsageCode) {
+    public void UsageCode(String UsageCode,String Depid,String Docnosend) {
         Usagecode = UsageCode;
+        DepID = Depid;
+        DocNoSend = Docnosend;
     }
 
 }

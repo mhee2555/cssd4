@@ -269,6 +269,8 @@ public class Login extends AppCompatActivity {
                 data.put("pword", params[1]);
 
                 String result = httpConnect.sendPostRequest(iFt.get_Login(), data);
+                Log.d("FKJDHJKDH",data+"");
+                Log.d("FKJDHJKDH",result+"");
                 return result;
             }
         }

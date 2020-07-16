@@ -154,7 +154,7 @@
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginLeft="15dp"
-        android:background="@drawable/btn_cancel1"
+        android:background="@drawable/btn_cancel"
         android:layout_toStartOf="@+id/summit"
         android:layout_marginTop="405dp">
     </Button>

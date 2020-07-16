@@ -242,6 +242,7 @@ public class Menu extends AppCompatActivity {
         intent.putExtra("user_name", user_name);
         intent.putExtra("IsAdmin", IsAdmin);
         intent.putExtra("B_ID", B_ID);
+        intent.putExtra("EmpCode", EmpCode);
         Log.d("BANK",B_ID);
         startActivity(intent);
     }

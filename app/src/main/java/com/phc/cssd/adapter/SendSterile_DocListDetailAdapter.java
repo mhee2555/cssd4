@@ -6,6 +6,7 @@ package com.phc.cssd.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -79,29 +80,7 @@ public class SendSterile_DocListDetailAdapter extends ArrayAdapter {
             @Override
             public void onClick(View view) {
                 if (!checkBoxsub.isChecked()){
-                    final Dialog dialog = new Dialog(aActivity);
-                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                    dialog.setContentView(R.layout.remark_dialog_sendsterlie);
-                    dialog.setCancelable(true);
-                    dialog.setTitle("หมายเหตุ...");
-
-//                    final EditText note1 = (EditText) dialog.findViewById(R.id.note1);
-//                    note1.setText(listData.get(position).getXremark());
-//
-//                    Button button1 = (Button) dialog.findViewById(R.id.button1);
-//                    button1.setOnClickListener(new View.OnClickListener() {
-//                        public void onClick(View v) {
-//                            dialog.dismiss();
-//                        }
-//                    });
-//
-//                    Button button5 = (Button) dialog.findViewById(R.id.button5);
-//                    button5.setOnClickListener(new View.OnClickListener() {
-//                        public void onClick(View v) {
-//                            dialog.dismiss();
-//                        }
-//                    });
-                    dialog.show();
+                    ((SendSterile_MainActivity)aActivity).OpenDialog(listData.get(position).getItemname());
                 }
             }
         });
@@ -110,7 +89,7 @@ public class SendSterile_DocListDetailAdapter extends ArrayAdapter {
         txtitemname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                (( SendSterile_MainActivity )aActivity).LoadImg(listData.get(position).getItemcode(),"2",listData.get(position).getUsageCode(),listData.get(position).getItemname());
+                ((SendSterile_MainActivity)aActivity).LoadImg(listData.get(position).getItemcode(),"2",listData.get(position).getUsageCode(),listData.get(position).getItemname());
             }
         });
         txtxqty.setText( listData.get(position).getXqty() );

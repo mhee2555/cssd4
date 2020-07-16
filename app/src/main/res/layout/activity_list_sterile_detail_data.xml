@@ -122,8 +122,6 @@
             android:scaleY="1.7"
             android:visibility="gone"/>
 
-
-
         <ImageView
             android:id="@+id/imv_print"
             android:layout_width="28dp"
