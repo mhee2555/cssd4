@@ -7,6 +7,7 @@ package com.phc.cssd.adapter;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,7 +70,18 @@ public class SendSterile_DocListDetailAdapter extends ArrayAdapter {
         final int xps = position;
         TextView txtitemname = (TextView) v.findViewById(R.id.itemname);
         TextView txtxqty = (TextView) v.findViewById(R.id.xqty);
+        TextView textView49 = (TextView) v.findViewById(R.id.textView49);
+        RelativeLayout R1 = (RelativeLayout) v.findViewById(R.id.R1);
         final CheckBox checkBoxsub = (CheckBox ) v.findViewById(R.id.checkBoxsub);
+
+        R1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!listData.get(position).getRemarkAdmin().equals("0")){
+                    ((SendSterile_MainActivity)aActivity).OpenDialog(listData.get(position).getItemname(),"1");
+                }
+            }
+        });
 
         checkBoxsub.setChecked(true);
         if (CheckAll == CheckAllAd) {
@@ -76,11 +89,24 @@ public class SendSterile_DocListDetailAdapter extends ArrayAdapter {
         } else {
             checkBoxsub.setChecked(false);
         }
+
+        if (!listData.get(position).getRemarkAdmin().equals("0")){
+            checkBoxsub.setChecked(false);
+            txtitemname.setTextColor(Color.RED);
+            txtxqty.setTextColor(Color.RED);
+            textView49.setTextColor(Color.RED);
+        }else {
+            checkBoxsub.setChecked(true);
+            txtitemname.setTextColor(Color.BLACK);
+            txtxqty.setTextColor(Color.BLACK);
+            textView49.setTextColor(Color.BLACK);
+        }
+
         checkBoxsub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!checkBoxsub.isChecked()){
-                    ((SendSterile_MainActivity)aActivity).OpenDialog(listData.get(position).getItemname());
+                    ((SendSterile_MainActivity)aActivity).OpenDialog(listData.get(position).getItemname(),"0");
                 }
             }
         });

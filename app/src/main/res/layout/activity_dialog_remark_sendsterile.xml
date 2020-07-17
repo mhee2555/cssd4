@@ -45,6 +45,53 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:text="ชื่อเจ้าหน้าที่แผนก  : "
+                        android:textColor="@color/colorBlack"
+                        android:gravity="center|left"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/userdep"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_toEndOf="@+id/text"
+                        android:textSize="20dp"
+                        android:hint=" หมายเหตุ..."
+                        android:gravity="left|top"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/login_block">
+
+                    </EditText>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/R1"
             android:layout_width="match_parent"
             android:layout_height="60dp"

@@ -58,7 +58,12 @@ public class pCustomer {
     private String RemarkEms;
     private String IsDenger;
     private boolean CheckAll;
-    
+    private String RemarkAdmin;
+
+
+    public String getRemarkAdmin() { return RemarkAdmin; }
+
+    public void setRemarkAdmin(String remarkAdmin) { RemarkAdmin = remarkAdmin; }
 
     public String getIsDenger() { return IsDenger; }
 

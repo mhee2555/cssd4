@@ -2,6 +2,7 @@ package com.phc.cssd;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -29,13 +30,17 @@ public class dialog_remark_sendsterile extends Activity {
 
     LinearLayout R1,R2,R3;
     CheckBox check1,check2,check3,check4,check5,check6;
-    EditText text_remark;
+    EditText text_remark,userdep;
     Button summit,cancle;
 
     String Itemname,Usagecode,DepID,DocNoSend;
-    String datacheck,EmpCode;
+    String datacheck,EmpCode,Type;
+    String IsSave = "0";
+
+    private SendSterile_MainActivity context;
 
     Intent intent;
+
     private String TAG_RESULTS = "result";
     private JSONArray rs = null;
     private HTTPConnect httpConnect = new HTTPConnect();
@@ -61,6 +66,10 @@ public class dialog_remark_sendsterile extends Activity {
         DepID = intent.getStringExtra("DepID");
         DocNoSend = intent.getStringExtra("DocNoSend");
         EmpCode = intent.getStringExtra("EmpCode");
+        Type = intent.getStringExtra("Type");
+        if (Type.equals("1")){
+            ShowDetail(DocNoSend,Itemname);
+        }
     }
 
     public void initialize() {
@@ -153,6 +162,7 @@ public class dialog_remark_sendsterile extends Activity {
         R2 = (LinearLayout) findViewById(R.id.R2);
         R3 = (LinearLayout) findViewById(R.id.R3);
         text_remark = (EditText) findViewById(R.id.text_remark);
+        userdep = (EditText) findViewById(R.id.userdep);
         summit = (Button) findViewById(R.id.summit);
         summit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +180,11 @@ public class dialog_remark_sendsterile extends Activity {
                 }else if (check6.isChecked()){
                     datacheck = "6";
                 }
-                SaveRemark(datacheck,text_remark.getText().toString(),DocNoSend,Usagecode,Itemname,DepID);
+                if (userdep.getText().toString().equals("")){
+                    Toast.makeText(dialog_remark_sendsterile.this, "กรุณากรอกชื่อเจ้าาหน้าที่", Toast.LENGTH_SHORT).show();
+                }else {
+                    SaveRemark(datacheck,text_remark.getText().toString(),DocNoSend,Usagecode,Itemname,DepID);
+                }
             }
         });
 
@@ -184,12 +198,7 @@ public class dialog_remark_sendsterile extends Activity {
 
     }
 
-    public void SaveRemark(final String remarkselect,
-                           final String noteremark,
-                           final String senddocno,
-                           final String usagecode,
-                           final String itemname,
-                           final String depname) {
+    public void SaveRemark(final String remarkselect, final String noteremark, final String senddocno, final String usagecode, final String itemname, final String depname) {
         class SaveRemark extends AsyncTask<String, Void, String> {
             @Override
             protected void onPreExecute() {
@@ -205,7 +214,14 @@ public class dialog_remark_sendsterile extends Activity {
                     rs = jsonObj.getJSONArray(TAG_RESULTS);
                     for(int i=0;i<rs.length();i++) {
                         JSONObject c = rs.getJSONObject(i);
-
+                        if (c.getString("finish").equals("true")){
+                            finish();
+                            Toast.makeText(dialog_remark_sendsterile.this, "บันทึกสำเร็จ", Toast.LENGTH_SHORT).show();
+                            IsSave = "1";
+                        }else {
+                            Toast.makeText(dialog_remark_sendsterile.this, "บันทึกไม่สำเร็จ", Toast.LENGTH_SHORT).show();
+                            IsSave = "0";
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -221,8 +237,9 @@ public class dialog_remark_sendsterile extends Activity {
                 data.put("senddocno",senddocno);
                 data.put("usagecode",usagecode);
                 data.put("itemname",itemname);
-                data.put("depname",depname);
+                data.put("depname",userdep.getText().toString());
                 data.put("EmpCode",EmpCode);
+                data.put("Type",Type);
                 String result = null;
                 try {
                     result = httpConnect.sendPostRequest(Url.URL + "cssd_save_remark_send.php", data);
@@ -236,6 +253,105 @@ public class dialog_remark_sendsterile extends Activity {
             // =========================================================================================
         }
         SaveRemark obj = new SaveRemark();
+        obj.execute();
+    }
+
+    public void ShowDetail(final String senddocno, final String itemname) {
+        class ShowDetail extends AsyncTask<String, Void, String> {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+                super.onPostExecute(result);
+
+                try {
+                    JSONObject jsonObj = new JSONObject(result);
+                    rs = jsonObj.getJSONArray(TAG_RESULTS);
+                    for(int i=0;i<rs.length();i++) {
+                        JSONObject c = rs.getJSONObject(i);
+                        userdep.setText(c.getString("DepRemark"));
+                        text_remark.setText(c.getString("Note"));
+                        userdep.setEnabled(false);
+                        text_remark.setEnabled(false);
+                        summit.setEnabled(false);
+                        check1.setEnabled(false);
+                        check2.setEnabled(false);
+                        check3.setEnabled(false);
+                        check4.setEnabled(false);
+                        check5.setEnabled(false);
+                        check6.setEnabled(false);
+                        if (c.getString("RemarkTypeID").equals("1")){
+                            check1.setChecked(true);
+                            check2.setChecked(false);
+                            check3.setChecked(false);
+                            check4.setChecked(false);
+                            check5.setChecked(false);
+                            check6.setChecked(false);
+                        }else if (c.getString("RemarkTypeID").equals("2")){
+                            check2.setChecked(true);
+                            check1.setChecked(false);
+                            check3.setChecked(false);
+                            check4.setChecked(false);
+                            check5.setChecked(false);
+                            check6.setChecked(false);
+                        }else if (c.getString("RemarkTypeID").equals("3")){
+                            check3.setChecked(true);
+                            check1.setChecked(false);
+                            check2.setChecked(false);
+                            check4.setChecked(false);
+                            check5.setChecked(false);
+                            check6.setChecked(false);
+                        }else if (c.getString("RemarkTypeID").equals("4")){
+                            check4.setChecked(true);
+                            check1.setChecked(false);
+                            check2.setChecked(false);
+                            check3.setChecked(false);
+                            check5.setChecked(false);
+                            check6.setChecked(false);
+                        }else if (c.getString("RemarkTypeID").equals("5")){
+                            check5.setChecked(true);
+                            check1.setChecked(false);
+                            check2.setChecked(false);
+                            check3.setChecked(false);
+                            check4.setChecked(false);
+                            check6.setChecked(false);
+                        }else if (c.getString("RemarkTypeID").equals("6")){
+                            check6.setChecked(true);
+                            check1.setChecked(false);
+                            check2.setChecked(false);
+                            check3.setChecked(false);
+                            check4.setChecked(false);
+                            check5.setChecked(false);
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @SuppressLint("WrongThread")
+            @Override
+            protected String doInBackground(String... params) {
+                HashMap<String, String> data = new HashMap<String,String>();
+                data.put("senddocno",senddocno);
+                data.put("itemname",itemname);
+                data.put("Type",Type);
+                String result = null;
+                try {
+                    result = httpConnect.sendPostRequest(Url.URL + "cssd_display_detail_remark.php", data);
+                    Log.d("FKJDHJKDH",data+"");
+                    Log.d("FKJDHJKDH",result+"");
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+                return result;
+            }
+            // =========================================================================================
+        }
+        ShowDetail obj = new ShowDetail();
         obj.execute();
     }
 

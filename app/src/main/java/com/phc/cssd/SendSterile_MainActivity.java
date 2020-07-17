@@ -193,6 +193,7 @@ public class SendSterile_MainActivity extends AppCompatActivity {
     String DepID = "";
     String DocNoSend = "";
     String EmpCode = "";
+    String Type = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -218,6 +219,7 @@ public class SendSterile_MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getuserCode();
+        getlistdetail(Usagecode);
     }
 
     public void byIntent() {
@@ -1226,7 +1228,6 @@ public class SendSterile_MainActivity extends AppCompatActivity {
         ru.execute(department_id, Date, sreach);
     }
 
-
     public void getlistdetail(final String UsageCode) {
         class getlistdetail extends AsyncTask<String, Void, String> {
             @Override
@@ -1247,6 +1248,7 @@ public class SendSterile_MainActivity extends AppCompatActivity {
                         xST.setItemname(c.getString("itemname"));
                         xST.setXqty(c.getString("Qty"));
                         xST.setUsageCode(UsageCode);
+                        xST.setRemarkAdmin(c.getString("RemarkAdmin"));
                         pCus.add(xST);
                         cnt++;
                     }
@@ -1257,7 +1259,6 @@ public class SendSterile_MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                 }
             }
-
             //class connect php RegisterUserClass important !!!!!!!
             @Override
             protected String doInBackground(String... params) {
@@ -3328,13 +3329,15 @@ public class SendSterile_MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void OpenDialog(final String Itemname) {
+    public void OpenDialog(final String Itemname , final String type) {
         Intent intent = new Intent(SendSterile_MainActivity.this, dialog_remark_sendsterile.class);
         intent.putExtra("Itemname", Itemname);
         intent.putExtra("Usagecode", Usagecode);
         intent.putExtra("DepID", DepID);
         intent.putExtra("DocNoSend", DocNoSend);
         intent.putExtra("EmpCode",EmpCode);
+        intent.putExtra("Type",type);
+        intent.putExtra("context", String.valueOf(SendSterile_MainActivity.this));
         Log.d("FKJDHJKDH",EmpCode+"");
         startActivity(intent);
     }
